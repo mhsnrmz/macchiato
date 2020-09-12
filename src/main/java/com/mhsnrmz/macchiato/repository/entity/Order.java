@@ -5,7 +5,7 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
-import java.util.List;
+import java.util.Set;
 
 @MappedSuperclass
 @Entity
@@ -15,7 +15,7 @@ import java.util.List;
 public class Order extends UniversalIdentifiableEntity {
 
     @OneToMany
-    private List<OrderItem> items;
+    private Set<OrderItem> items;
 
     @ManyToOne
     private Table table;
