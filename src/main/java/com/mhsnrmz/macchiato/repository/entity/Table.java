@@ -7,7 +7,6 @@ import javax.persistence.Entity;
 import javax.persistence.EntityListeners;
 import javax.persistence.MappedSuperclass;
 
-@MappedSuperclass
 @Entity
 @EntityListeners(AuditingEntityListener.class)
 @Data

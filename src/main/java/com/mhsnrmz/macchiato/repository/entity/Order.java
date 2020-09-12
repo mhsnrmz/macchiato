@@ -7,7 +7,6 @@ import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.Set;
 
-@MappedSuperclass
 @Entity
 @javax.persistence.Table(name = "orders")
 @EntityListeners(AuditingEntityListener.class)

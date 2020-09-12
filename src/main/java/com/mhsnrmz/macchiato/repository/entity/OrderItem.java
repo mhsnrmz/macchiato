@@ -8,7 +8,6 @@ import javax.persistence.EntityListeners;
 import javax.persistence.ManyToOne;
 import javax.persistence.MappedSuperclass;
 
-@MappedSuperclass
 @Entity
 @EntityListeners(AuditingEntityListener.class)
 @Data

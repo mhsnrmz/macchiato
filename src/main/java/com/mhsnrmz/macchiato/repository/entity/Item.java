@@ -7,7 +7,6 @@ import javax.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalTime;
 
-@MappedSuperclass
 @Entity
 @EntityListeners(AuditingEntityListener.class)
 @Data
