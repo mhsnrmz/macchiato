@@ -1,10 +1,10 @@
 package com.mhsnrmz.macchiato.repository;
 
+import com.mhsnrmz.macchiato.repository.entity.Item;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.stereotype.Repository;
 
-import java.awt.*;
-
 @Repository
-public interface ItemRepository extends JpaRepository<MenuItem, Long> {
+public interface ItemRepository extends JpaRepository<Item, Long>, JpaSpecificationExecutor<Item> {
 }

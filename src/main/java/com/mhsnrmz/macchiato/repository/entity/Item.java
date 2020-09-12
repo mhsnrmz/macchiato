@@ -7,7 +7,6 @@ import javax.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalTime;
 
-@MappedSuperclass
 @Entity
 @EntityListeners(AuditingEntityListener.class)
 @Data
@@ -21,6 +20,5 @@ public class Item extends UniversalIdentifiableEntity {
     private String material;
 
     @ManyToOne
-    @JoinColumn(name = "supplier_id", nullable = false)
     private MenuCategory category;
 }
