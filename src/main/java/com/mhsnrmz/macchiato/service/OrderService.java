@@ -1,7 +1,6 @@
 package com.mhsnrmz.macchiato.service;
 
 import com.mhsnrmz.macchiato.repository.OrderRepository;
-import com.mhsnrmz.macchiato.repository.entity.Item;
 import com.mhsnrmz.macchiato.repository.entity.Order;
 import com.mhsnrmz.macchiato.service.pagination.Pagination;
 import com.mhsnrmz.macchiato.service.pagination.SearchResultDto;
