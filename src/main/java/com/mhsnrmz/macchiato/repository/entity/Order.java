@@ -9,6 +9,7 @@ import java.util.List;
 
 @MappedSuperclass
 @Entity
+@javax.persistence.Table(name = "orders")
 @EntityListeners(AuditingEntityListener.class)
 @Data
 public class Order extends UniversalIdentifiableEntity {

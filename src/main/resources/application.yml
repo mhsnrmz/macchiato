@@ -1,0 +1,36 @@
+server:
+  port: 8183
+  error:
+    whitelabel:
+      enabled: false
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/macchiato
+    driverClassName: org.postgresql.Driver
+    username: postgres
+    password: 123
+    data: classpath:data.sql
+    initialization-mode: always
+  jpa:
+    database: POSTGRESQL
+    show-sql: false
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: create
+
+
+  resources:
+    add-mappings: false
+logging:
+  level:
+    root: DEBUG
+    org.springframework.web: DEBUG
+    org.hibernate: DEBUG
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
