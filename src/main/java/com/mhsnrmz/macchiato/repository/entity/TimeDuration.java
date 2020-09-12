@@ -13,6 +13,6 @@ public class TimeDuration {
     @Column(name = "start")
     private LocalTime start;
 
-    @Column(name = "end")
-    private LocalTime end;
+    @Column(name = "finish")
+    private LocalTime finish;
 }

@@ -20,6 +20,5 @@ public class Item extends UniversalIdentifiableEntity {
     private String material;
 
     @ManyToOne
-    @JoinColumn(name = "supplier_id", nullable = false)
     private MenuCategory category;
 }

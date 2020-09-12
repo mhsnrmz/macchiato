@@ -13,6 +13,6 @@ public class MenuCategory extends UniversalIdentifiableEntity {
     private Boolean available;
 
     @AttributeOverride(name = "serverStartTime", column = @Column(name = "start"))
-    @AttributeOverride(name = "serveEndTime", column = @Column(name = "end"))
+    @AttributeOverride(name = "serveEndTime", column = @Column(name = "finish"))
     private TimeDuration serveTime;
 }

@@ -5,9 +5,9 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.Entity;
 import javax.persistence.EntityListeners;
-import javax.persistence.MappedSuperclass;
 
 @Entity
+@javax.persistence.Table(name = "coffee_shop_table")
 @EntityListeners(AuditingEntityListener.class)
 @Data
 public class Table extends UniversalIdentifiableEntity {

@@ -30,8 +30,8 @@ public class MenuCategoryServices {
         return repository.findById(id).orElseThrow(EntityNotFoundException::new);
     }
 
-    public SearchResultDto<MenuCategory> getAll(final Specification<MenuCategory> specs, int offset, int limit,
-                                                String sortBy, String direction) {
+    public SearchResultDto<MenuCategory> getAll(final Specification<MenuCategory> specs, final int offset, final int limit,
+                                                final String sortBy, final String direction) {
         Page<MenuCategory> result = repository.
                 findAll(specs, pagination.buildPageable(offset - 1, limit, sortBy, SortDirection.fromString(direction)));
         if (result.isEmpty()) {

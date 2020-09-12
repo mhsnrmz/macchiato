@@ -6,7 +6,6 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import javax.persistence.Entity;
 import javax.persistence.EntityListeners;
 import javax.persistence.ManyToOne;
-import javax.persistence.MappedSuperclass;
 
 @Entity
 @EntityListeners(AuditingEntityListener.class)
