@@ -11,7 +11,7 @@ import java.time.LocalTime;
 @EntityListeners(AuditingEntityListener.class)
 @Data
 public class Item extends UniversalIdentifiableEntity {
-    private String name;
+    private String itemName;
     private BigDecimal price;
     private LocalTime serveTime;
     private Boolean available;
