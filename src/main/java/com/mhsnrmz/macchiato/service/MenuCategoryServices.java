@@ -30,6 +30,7 @@ public class MenuCategoryServices {
         return repository.findById(id).orElseThrow(EntityNotFoundException::new);
     }
 
+    //TODO: add customized specification
     public SearchResultDto<MenuCategory> getAll(final Specification<MenuCategory> specs, final int offset, final int limit,
                                                 final String sortBy, final String direction) {
         Page<MenuCategory> result = repository.
