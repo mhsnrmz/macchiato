@@ -1,6 +1,6 @@
 package com.mhsnrmz.macchiato.repository.entity;
 
-public interface IdentifiableEntity<T> {
-    T getId();
-    void setId(T id);
+public interface IdentifiableEntity {
+    long getId();
+    void setId(long id);
 }

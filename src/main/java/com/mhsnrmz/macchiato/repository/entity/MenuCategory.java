@@ -10,7 +10,7 @@ import javax.persistence.*;
 @Data
 public class MenuCategory extends UniversalIdentifiableEntity {
     private String name;
-    private Boolean available;
+    private boolean available;
 
     @AttributeOverride(name = "serverStartTime", column = @Column(name = "start"))
     @AttributeOverride(name = "serveEndTime", column = @Column(name = "finish"))

@@ -22,7 +22,6 @@ public class OrderService {
     Pagination pagination;
 
     public Order add(Order order) {
-        order.setId(null);
         return repository.save(order);
     }
 

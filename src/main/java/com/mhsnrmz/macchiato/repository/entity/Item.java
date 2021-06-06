@@ -14,7 +14,7 @@ public class Item extends UniversalIdentifiableEntity {
     private String itemName;
     private BigDecimal price;
     private LocalTime serveTime;
-    private Boolean available;
+    private boolean available;
 
     @Lob
     private String material;

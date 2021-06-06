@@ -11,6 +11,6 @@ import javax.persistence.EntityListeners;
 @EntityListeners(AuditingEntityListener.class)
 @Data
 public class Table extends UniversalIdentifiableEntity {
-    private Boolean empty;
-    private Boolean reserved;
+    private boolean empty;
+    private boolean reserved;
 }

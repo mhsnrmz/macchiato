@@ -22,7 +22,6 @@ public class MenuItemServices {
     Pagination pagination;
 
     public Item add(Item item) {
-        item.setId(null);
         return repository.save(item);
     }
 

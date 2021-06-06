@@ -21,17 +21,18 @@ import static javax.persistence.TemporalType.TIMESTAMP;
 @Setter
 @ToString
 @EqualsAndHashCode
-public abstract class UniversalIdentifiableEntity implements IdentifiableEntity<Long> {
+public abstract class UniversalIdentifiableEntity implements IdentifiableEntity {
 
     @Id
     @GeneratedValue(generator="increment")
     @GenericGenerator(name="increment", strategy = "increment")
-    @Column(name = "ID")
-    private Long id;
+    @Column(name = "ID", updatable = false)
+    private long id;
 
     @CreatedDate
     @Temporal(TIMESTAMP)
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss.SSS")
+    @Column(updatable = false)
     protected Date createdDate;
 
     @LastModifiedDate

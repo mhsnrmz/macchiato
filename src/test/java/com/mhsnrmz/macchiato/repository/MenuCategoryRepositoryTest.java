@@ -7,7 +7,6 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
-import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.persistence.EntityExistsException;
@@ -41,7 +40,7 @@ public class MenuCategoryRepositoryTest {
 
     @Test(expected = EntityNotFoundException.class)
     public void whenGetMenuCategoryData_thenReturnNotFound() {
-        repository.findById(1l).orElseThrow(EntityNotFoundException::new);
+        repository.findById(10l).orElseThrow(EntityNotFoundException::new);
     }
 
     //TODO: add search test

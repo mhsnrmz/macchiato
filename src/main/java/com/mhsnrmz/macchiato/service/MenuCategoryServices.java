@@ -22,11 +22,10 @@ public class MenuCategoryServices {
     Pagination pagination;
 
     public MenuCategory add(MenuCategory menuCategory) {
-        menuCategory.setId(null);
         return repository.save(menuCategory);
     }
 
-    public MenuCategory get(final Long id) {
+    public MenuCategory get(final long id) {
         return repository.findById(id).orElseThrow(EntityNotFoundException::new);
     }
 
@@ -41,7 +40,7 @@ public class MenuCategoryServices {
         return new SearchResultDto<>(result.getContent(), result.getTotalElements(), result.getTotalPages());
     }
 
-    public MenuCategory update (final Long id, MenuCategory menuCategory) {
+    public MenuCategory update (final long id, MenuCategory menuCategory) {
         if (!repository.existsById(id)) {
             throw new EntityNotFoundException();
         }
@@ -49,7 +48,7 @@ public class MenuCategoryServices {
         return repository.save(menuCategory);
     }
 
-    public void delete (final Long id) {
+    public void delete (final long id) {
         if (!repository.existsById(id)) {
             throw new EntityNotFoundException();
         }

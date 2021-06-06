@@ -27,10 +27,3 @@ logging:
     root: DEBUG
     org.springframework.web: DEBUG
     org.hibernate: DEBUG
-
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"

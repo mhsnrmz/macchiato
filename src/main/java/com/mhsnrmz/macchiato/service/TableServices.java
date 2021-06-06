@@ -22,7 +22,6 @@ public class TableServices {
     Pagination pagination;
 
     public Table add(Table table) {
-        table.setId(null);
         return repository.save(table);
     }
 
